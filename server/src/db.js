@@ -1,5 +1,7 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
+const countryModel = require("./models/Country.js");
+const activityModel = require("./models/Activity.js");
 
 const fs = require('fs');
 const path = require('path');
@@ -27,6 +29,9 @@ modelDefiners.forEach(model => model(sequelize));
 let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
+
+countryModel(sequelize);
+activityModel(sequelize);
 
 const { Country, Activity } = sequelize.models;
 

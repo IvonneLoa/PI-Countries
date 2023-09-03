@@ -1,0 +1,20 @@
+.div {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    border-radius: 28px;
+    font-family: cursive;
+    font-size: 2em;
+    color: blueviolet;
+    padding: 12px;
+    right: 300px;
+    top: 250px;
+    position: unset;
+    border: ridge;
+    background: aqua;
+    border-left-width: medium;
+    cursor: pointer;
+    margin: 15px;
+}

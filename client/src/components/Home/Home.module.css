@@ -1,0 +1,42 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+        
+}
+
+.home h1 {
+    color: blue;
+    font-family: cursive;
+}
+
+.div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divbut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.but {
+    background-color: royalblue;
+    width: 100%;
+    color: fuchsia;
+    padding: 15px 32px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: cursive;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 15%;
+}
+
+.but:hover {
+  color: aqua;
+}

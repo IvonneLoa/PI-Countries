@@ -2,10 +2,10 @@ const { Country, Activity } = require("../db");
 
 const getCountrybyId = async (req , res) => {
     try {
-        const { idPais } = req.params;
+        const { id } = req.params;
     
         
-        const country = await Country.findByPk(idPais, {
+        const country = await Country.findByPk(id, {
           include: {
             model: Activity,
             attributes: ['name', 'difficulty', 'duration', 'season'],

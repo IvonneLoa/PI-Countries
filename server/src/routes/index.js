@@ -10,9 +10,9 @@ const getActivities = require("../controllers/getActivities.js");
 
 
 //rutas
-router.get('/countries', getCountries) //solicita todos los paises a la bd
-router.get("/countries/:i", getCountriesbyId) //solicita el pais por id a la bd
-router.get("/countries/name", getCountriesbyName)
+router.get("/countries", getCountries) //solicita todos los paises a la bd
+router.get("/countries/:id", getCountriesbyId) //solicita el pais por id a la bd
+router.get("/countries/:name", getCountriesbyName)
 router.post("/activities", postActivities) // crea una nueva actividad turistica
 router.get("/activities", getActivities) // solicita la lista de actividades turisticas
 

@@ -1,0 +1,36 @@
+.card {
+    margin: 20px;
+    width: 15rem;
+    height: 23rem;
+    background-color: blueviolet;
+    border: 2px solid #06d6a0;
+    font-family: cursive;
+    border-radius: 2em;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px 1px rgb(1, 0, 1);
+    background-color: aqua;
+    width: 15rem;
+}
+
+.h1 {
+    font-size: 28px;
+    margin: 5%;
+}
+
+.h3 {
+    font-size: 28px;
+    margin: 5%;
+}
+
+.image {
+    padding: 0;
+    width: 16vw;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 5%;
+}
