@@ -1,0 +1,15 @@
+.but {
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    border-style: groove;
+    cursor: pointer;
+    font-family: cursive;
+ }
+
+ .but:hover {
+    background-color: aqua;
+ }

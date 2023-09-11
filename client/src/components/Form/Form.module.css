@@ -1,0 +1,113 @@
+.containerForm form{ 
+  position: relative;
+  width: 700px;
+  height: 458px;
+  background-image: url("../../image/mapa2.jpg");
+  border-radius: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border: solid #2d4bf3 10px;
+  width: fit-content;
+  height: fit-content;
+} 
+
+.containerForm p{ 
+  align-items: center; 
+  color:red;
+  grid-column:center; 
+  margin: 1%; 
+  font-size: 15px; 
+  font-family: cursive;
+} 
+
+.containerForm label {
+  font-size: 40px;
+  color: aqua;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.tittle {
+  justify-content: center;
+  color: blue;
+  font-family: cursive;
+}
+
+.input {
+  background: silver;
+  border: 3px solid #2d4bf3;
+  border-radius: 50px;
+  color: black;
+  font-family: cursive;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.input:hover {
+  background-color: blueviolet;
+}
+
+.submit {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  font-size: large;
+  font-family: cursive;
+  color: black;
+  background-color: aqua;
+  border: 2px solid blue;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.submit:hover {
+ background-color: fuchsia;
+}
+
+.containerFlags { 
+  display: grid;  
+  grid-template-columns: repeat(6,1fr); 
+  gap: 1%; 
+  border: 2px solid; 
+  max-width: 80vw;        
+  max-height: 45vh;     
+  overflow: auto; 
+  padding: 1%; 
+  margin: 1%; 
+} 
+
+.flags{ 
+ position: relative;  
+ max-width: 300px;    
+} 
+
+.flags img {     
+  height: auto; 
+  width: 100%;   
+  aspect-ratio: 1.5/1; /*sirve para la relacion ancho alto*/     
+} 
+
+.buttonX{ 
+  position:absolute; 
+  top: 0; 
+  right: 0; 
+  cursor: pointer; 
+  background-color: #0908087d; 
+  color: rgb(242, 234, 234); 
+  font-size: 1vw; 
+  padding: 0.6vh 1vh;   
+  margin: 0.4vh;  
+  border: rgb(101, 146, 174) solid 0.4px;   
+} 
+
+.buttonX:hover { 
+  color: red; 
+  filter:brightness(1); 
+  transform: scale(1.2); 
+}
+
+.pl {
+  color: yellow;
+}

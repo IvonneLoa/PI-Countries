@@ -1,0 +1,25 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+    font-family: cursive;
+    color: blueviolet;
+}
+
+.but {
+    background-color: aqua;
+    color: blue;
+    border-radius: 50px;
+    border-color: blueviolet;
+    margin: 20px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.but:hover {
+    background-color: magenta;
+}

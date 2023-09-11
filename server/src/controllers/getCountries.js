@@ -10,7 +10,7 @@ const getCountries = async (req , res) => {
               [Op.iLike]: `%${name}%`
             }
           },
-          incluede: {
+          include: {
             model: Activity,
             attributes: ["name"],
             through: {

@@ -1,10 +1,5 @@
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
-    flex-wrap: wrap;
-        
 }
 
 .home h1 {
@@ -15,7 +10,8 @@
 .div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: row;
 }
 
 .divbut {
@@ -39,4 +35,9 @@
 
 .but:hover {
   color: aqua;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-around;
 }

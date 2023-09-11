@@ -8,17 +8,19 @@ const getCountrybyId = async (req , res) => {
         const country = await Country.findByPk(id, {
           include: {
             model: Activity,
-            attributes: ['name', 'difficulty', 'duration', 'season'],
+            through: {
+              attributes: []
+            }
           },
         });
     
         if (!country) {
-          return res.status(404).json({ message: 'País no encontrado' });
+          return res.status(404).send({ message: "País no encontrado" });
         }
     
         return res.status(200).json(country);
       } catch (error) {
-        return res.status(500).json({ message: 'Error al obtener el país', error: error.message });
+        return res.status(500).send({ message: "Error al obtener el país", error: error.message });
       }
     };
 

@@ -5,7 +5,8 @@ import LandingPage from "./components/LandingPage/LandingPage.jsx";
 import Home from "./components/Home/Home.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
-// import Form from "./components/Form/Form.jsx";
+import Form from "./components/Form/Form.jsx";
+import Activities from './components/Activities/Activities';
 // import Error from "./components/Error/Error.jsx";
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
         <Route path='/' element={<LandingPage/>} />
         <Route path='/home' element={<Home/>} />
         <Route path='/detail/:id' element={<Detail/>} />
-        {/* <Route path='/activities' element={<Form/>} />
-        <Route path='/*' element={<Error/>} /> */}
+        <Route path="/createActivities" element={<Form/>}/>
+        <Route path="/activities" element={<Activities/>}/>
       </Routes>
     </div>
   )

@@ -1,54 +1,45 @@
 import style from "./Home.module.css";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import Card from "../Card/Card.jsx";
+// import { useDispatch } from "react-redux";
+// import { getCountries, getActivities } from "../../redux/actions";
+import Cards from "../Cards/Cards.jsx";
+import Filter from "../Filter/Filter.jsx";
 
 function Home() {
-  const data = useSelector(state => state.countries);
 
-  const page = 10;
+  // const dispatch = useDispatch(); 
+  
+  //  useEffect(() => { 
+  //    dispatch(getCountries());
+  //    dispatch(getActivities());
+  //  }, [dispatch]) 
 
-  const [currentPage, setCurrentPage] = useState({
-    initialIndex: 0,
-    finalIndex: page
-  })
-
-  const currentCards = data.slice(currentPage.initialIndex, currentPage.finalIndex)
-
-  const countries = data.length > 10 ? currentCards : data
-
-  const back = () => {
-    setCurrentPage({
-      initialIndex: currentPage.initialIndex - 10,
-      finalIndex: currentPage.finalIndex - 10
-    })
-  }
-
-  const next = () => {
-    setCurrentPage({
-      initialIndex: currentPage.initialIndex + 10,
-      finalIndex: currentPage.finalIndex + 10
-    })
-  }
+   //Control del paginado 
+   const [currentPage, setCurrentPage] = useState(1); 
+   const countriesPerPage = 10; 
+   const indexOfLastCountry = currentPage * countriesPerPage; 
+   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage; 
+  
+  
+   const pagination = (pageNumber) => {  
+       setCurrentPage(pageNumber); 
+   }
 
     return (
-        <div className={style.home}>
-            <h1>Welcome to the home page</h1>
-          <div className={style.div}>
-          {countries && countries.map((country) => 
-          <Card
-          name={country.name}
-          continent={country.continent}
-          image={country.image}
-          id={country.id}
-          key={country.id}
-          />)}
+      <div className={style.home}>
+        <h1>🌎 Welcome to the home page 🌎</h1>
+          <div className={style.filter}>
+            <Filter pagination={pagination} />
           </div>
-          <div className={style.divbut}>
-            <button className={style.but} onClick={back} disabled={currentPage.initialIndex === 0}>Back</button>
-            <button className={style.but} onClick={next} disabled={currentPage.finalIndex >= data.length}>Next</button>
-          </div>
-        </div>
+      <div className={style.div}>
+          <Cards
+        indexOfFirstCountry={indexOfFirstCountry}  
+        indexOfLastCountry={indexOfLastCountry}  
+        pagination={pagination} 
+        countriesPerPage={countriesPerPage}
+          />
+      </div>
+     </div>
     )
 }
 

@@ -1,0 +1,18 @@
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 50px;
+  border-style: groove;
+  cursor: pointer;
+  font-family: cursive;
+ }
+
+ .select:hover {
+   background-color: aqua;
+ }

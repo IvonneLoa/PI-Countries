@@ -1,0 +1,19 @@
+.cardActivity {     
+    display: flex; 
+    flex-direction: column;    
+    width: fit-content; /* Ajusta el ancho según el contenido */ 
+    height: fit-content; /* Ajusta la altura según el contenido */    
+    border:3px aqua solid;
+    color: blue;
+    border-radius: 30px;
+    font-family: cursive;       
+    margin: 5%; 
+    padding: 5%; 
+    max-width: 70%;
+} 
+ 
+.h2{    
+    grid-column: 2/3; 
+    border-bottom: solid blueviolet;      
+    font-size: 1.5vw 
+}

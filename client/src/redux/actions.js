@@ -4,7 +4,13 @@ import {
     GET_COUNTRY,
     SEARCH_NAME,
     GET_ACTIVITIES,
-    RESET } from "./types";
+    ORDER_NAME,
+    ORDER_POPULATION,
+    FILTER_CONTINENT,
+    FILTER_ACTIVITIES,
+    RESET,
+    POST_ACTIVITY
+    } from "./types";
 
 export const getCountries = () => {
   return async function(dispatch) {
@@ -28,7 +34,8 @@ export const getCountry = (id) => {
 
 export const getSearchName = (name) => {
   return async function(dispatch) {
-    const countrySearchData = (await axios.get(`http://localhost:3001/countries?name=${name}`)).data;
+    try {
+      const countrySearchData = (await axios.get(`http://localhost:3001/countries?name=${name}`)).data;
     countrySearchData?.length ? 
     dispatch({
       type: SEARCH_NAME,
@@ -38,16 +45,80 @@ export const getSearchName = (name) => {
       type: SEARCH_NAME,
       payload: [],
     });
+    } catch (error) {
+      alert(error.message)
+    }
   }
 }
 
-export const getActivities = () => {
-  return async function(dispatch) {
-    const activitiesData = (await axios.get("http://localhost:3001/activities")).data;
-    dispatch({
-      type: GET_ACTIVITIES,
-      payload: activitiesData,
-    });
+// export const getActivities = () => {
+//   return async function(dispatch) {
+//     const activitiesData = (await axios("http://localhost:3001/activities")).data;
+//     dispatch({
+//       type: GET_ACTIVITIES,
+//       payload: activitiesData,
+//     });
+//   }
+// }
+
+export const getActivities = ()=>{ 
+  return async (dispatch) =>{ 
+      try { 
+          const {data}= await axios('http://localhost:3001/activities')              
+          return dispatch({ 
+              type:GET_ACTIVITIES,  
+              payload:data            
+          }) 
+      } 
+      catch (error) { 
+          console.log(error);        
+      } 
+  } 
+}
+export const postActivity =(activity)=>{ 
+  return async (dispatch) =>{ 
+      try { 
+          const {data} = await axios.post('http://localhost:3001/activities',activity )             
+          return dispatch({ 
+          type:POST_ACTIVITY,   
+          payload:data               
+          }) 
+      } 
+       catch (error) { 
+          console.log(error); 
+          return dispatch ({ 
+              type:POST_ACTIVITY, 
+              payload:{error:error.response.data} // el errror q mandamos de la bd y server 
+          }) 
+      } 
+  } 
+}
+
+export function orderName(order) {
+  return {
+    type: ORDER_NAME,
+    payload: order,
+  }
+}
+
+export function orderPopulation(order) {
+  return {
+    type: ORDER_POPULATION,
+    payload: order,
+  }
+}
+
+export function filterContinent(filter) {
+  return {
+    type: FILTER_CONTINENT,
+    payload: filter,
+  }
+}
+
+export function filterActivities(filter) {
+  return {
+    type: FILTER_ACTIVITIES,
+    payload: filter,
   }
 }
 
