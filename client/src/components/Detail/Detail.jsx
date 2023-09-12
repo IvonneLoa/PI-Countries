@@ -23,7 +23,7 @@ function Detail() {
     return (
       <div className={style.detail}>
         <Link to="/home">
-        <button className={style.button}>Back</button>
+        <button className={style.but}>Back</button>
         </Link>
         <div className={style.card}>
           <h1>Country: {country.name}</h1>
@@ -36,28 +36,26 @@ function Detail() {
           <img className={style.image} src={country.image} alt={country.name}/>
         </div>
         <div> 
-                     <h1> Tourist Activities:</h1> 
-                     <div> 
-                         { //si existen actividades para ese país 
-                             country.Activities && 
-                             country.Activities.length>0 ? (                             
-                                 country.Activities.map((elem)=><Activity 
-                                     key={elem.id} 
-                                     name={elem.name} 
-                                     season={elem.season}                             
-                                     Countries={[]} 
-                                 />)                       
-  
-                             ):( // si no existen actividades 
-                                 <> 
-                                     <h2>There are not tourist activities:</h2>                             
-                                 </> 
-                             ) 
-                         }                 
-                     </div>   
-                     <button onClick={()=>handlerclick()}>Create Activity</button>                     
-  
-                 </div>
+<h1> Tourist Activities:</h1> 
+    <div> 
+      { //si existen actividades para ese país 
+      country.Activities && 
+      country.Activities.length>0 ? (                             
+      country.Activities.map((elem)=>
+      <Activity 
+      key={elem.id} 
+      name={elem.name} 
+      season={elem.season}                             
+      Countries={[]} 
+      />)
+      ):( // si no existen actividades 
+      <> 
+      <h2>Not tourist activities:</h2>                             
+      </> 
+      )}                 
+    </div>   
+        <button className={style.but} onClick={()=>handlerclick()}>Create Activity</button>
+        </div>
       </div>
     )
 }

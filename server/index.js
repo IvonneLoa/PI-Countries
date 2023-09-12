@@ -3,7 +3,7 @@ const server = require("./src/server");
 const { conn, Country } = require('./src/db.js');
 const PORT = 3001;
 
-conn.sync({ alter: true })
+conn.sync({ force: true })
 .then(() => saveDB(Country))
 .then(() => {
 server.listen(PORT, () => {

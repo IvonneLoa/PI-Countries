@@ -2,7 +2,15 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  background-image: url("./image/fondo2.jpg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 10%;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #e3e4e5;

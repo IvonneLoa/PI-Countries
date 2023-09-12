@@ -38,7 +38,7 @@ module.exports = (sequelize) => {
     },
   },
   {
-    freeseTableName: true
+    timestamps: false,
   }
   );
 };

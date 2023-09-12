@@ -120,7 +120,7 @@ return (
         </Link> 
              <h1 className={s.tittle}>Activities</h1> 
 <form onSubmit={onSubmit}> 
-    <label htmlFor='name'>Name of the tourist activity: </label> 
+    <label>Name of the tourist activity: </label> 
         <input className={s.input}
           name='name' 
           placeholder='type here' 
@@ -128,7 +128,7 @@ return (
           onChange={handlerInputsChange} 
           /> 
     <p>{errors.name}</p> 
-    <label htmlFor='difficulty'>Difficulty: </label> 
+    <label>Difficulty: </label> 
       <select className={s.input} name='difficulty' onChange={handlerInputsChange}> 
         <option value=''>Select Difficulty</option> 
         <option value='1'>1</option> 
@@ -138,7 +138,7 @@ return (
         <option value='5'>5</option> 
       </select> 
     <p>{errors.difficulty}</p> 
-      <label htmlFor='duration'>Duration in hours: </label> 
+      <label>Duration in hours: </label> 
         <input className={s.input}
             name='duration' 
             placeholder='type here' 
@@ -146,7 +146,7 @@ return (
             onChange={handlerInputsChange} 
       /> 
     <p>{errors.duration}</p> 
-      <label htmlFor='season'>Season: </label> 
+      <label>Season: </label> 
         <select className={s.input} onChange={handlerInputsChange} name='season'> 
           <option value=''>Select season</option> 
           <option value='Winter'>Winter</option> 
@@ -155,7 +155,7 @@ return (
           <option value='Spring'>Spring</option> 
         </select> 
     <p>{errors.season}</p> 
-      <label htmlFor='countries'>Countries:</label> 
+      <label>Countries:</label> 
         <select className={s.input}
             value={selectedCountry}                    
             onChange={handlerSelectChange} 

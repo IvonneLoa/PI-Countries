@@ -22,6 +22,19 @@
    color: aqua;
 }
 
+.but {
+    border-radius: 28px;
+    font-family: cursive;
+    font-size: 10px;
+    color: blueviolet;
+    padding: 20px;
+    margin: 1em;
+    border: ridge;
+    background: aqua;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
 .card {
     margin: 20px;
     width: 30rem;

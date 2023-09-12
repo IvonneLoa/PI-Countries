@@ -96,7 +96,7 @@ const reducer = (state = initialState, action) => {
         countries:state.countriesOrigin 
        } 
     } 
-      const filterForActivities=state.activities.find((activity)=>activity.name===action.payload) // accedo a mi estado activities y filtro por nomobre de actividad             
+      const filterForActivities=state.activities.find((activity)=>activity.name===action.payload) // accedo a mi estado activities y filtro por nombre de actividad             
           return{ 
             ...state, 
          countries:filterForActivities.Countries // en .Countries se encuentra la info de los paises q tienen dicha actividad, esto viene de la tabla intermedia 

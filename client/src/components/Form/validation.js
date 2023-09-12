@@ -1,22 +1,22 @@
-export default function validation({name,difficulty,duration,season,countries}){ 
+export default function validation({name, difficulty, duration, season, countries}){ 
     const regexName=/^[^\d]+$/; 
     const errors={} 
  
-    if(!name) errors.name='Campo requerido' 
+    if(!name) errors.name = "Required field" 
     else { 
-        if(!regexName.test(name)) errors.name='Este campo no puede tener numeros' 
-        else if(name.length<3) errors.name='El nombre debe tener al menos 3 caracteres' 
+        if(!regexName.test(name)) errors.name = "This field cannot have numbers"
+        else if(name.length<3) errors.name = "The name must be at least 3 characters"
     } 
  
-    if(!difficulty) errors.difficulty='Campo requerido' 
+    if(!difficulty) errors.difficulty = "Required field" 
  
-    if(!duration) errors.duration='Campo requerido' 
-    else if(duration>72) errors.duration='La duracion no puede ser mayor a 72 horas' 
-    else if(duration<1)  errors.duration='La duracion no puede ser menor a 1 horas' 
+    if(!duration) errors.duration = "Required field"
+    else if(duration > 72) errors.duration = "The duration cannot be longer than 72 hours" 
+    else if(duration < 1)  errors.duration = "The duration cannot be less than 1 hour" 
  
-    if(!season) errors.season='Campo requerido' 
+    if(!season) errors.season = "Required field"
  
-    if(countries.length===0) errors.countries='Campo requerido' 
+    if(countries.length===0) errors.countries = "Required field"
  
-    return errors 
+    return errors;
 }

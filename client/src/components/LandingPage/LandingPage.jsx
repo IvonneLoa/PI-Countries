@@ -2,7 +2,7 @@ import style from "./LandingPage.module.css";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getCountries, getActivities } from "../../redux/actions";
+import { getCountries } from "../../redux/actions";
 
 
 function LandingPage() {
@@ -12,7 +12,6 @@ function LandingPage() {
 
   useEffect(() => {
     dispatch(getCountries());
-    dispatch(getActivities());
   }, [])
 
   const onClick = () => {

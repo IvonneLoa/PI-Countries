@@ -1,18 +1,10 @@
 import style from "./Home.module.css";
 import { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { getCountries, getActivities } from "../../redux/actions";
+import { Link } from "react-router-dom";
 import Cards from "../Cards/Cards.jsx";
 import Filter from "../Filter/Filter.jsx";
 
 function Home() {
-
-  // const dispatch = useDispatch(); 
-  
-  //  useEffect(() => { 
-  //    dispatch(getCountries());
-  //    dispatch(getActivities());
-  //  }, [dispatch]) 
 
    //Control del paginado 
    const [currentPage, setCurrentPage] = useState(1); 
@@ -27,6 +19,9 @@ function Home() {
 
     return (
       <div className={style.home}>
+        <Link to="/">
+          <button className={style.but}>Back</button>
+        </Link>
         <h1>🌎 Welcome to the home page 🌎</h1>
           <div className={style.filter}>
             <Filter pagination={pagination} />

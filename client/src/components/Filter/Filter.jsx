@@ -1,6 +1,6 @@
 import style from "./Filter.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { getCountries, getActivities, orderName, orderPopulation, filterContinent, filterActivities, reset } from "../../redux/actions";
+import { getCountries, orderName, orderPopulation, filterContinent, filterActivities, reset } from "../../redux/actions";
 import { ASCENDING, DESCENDING, HIG, LOW } from "../../redux/types";
 import { useEffect } from "react";
 
@@ -10,8 +10,7 @@ const Filter = ({ pagination }) => {
 
   const dispatch = useDispatch();
 
-  useEffect(()=>{  
-    if (activities.length === 0) dispatch(getActivities());           
+  useEffect(()=>{        
     dispatch(getCountries())
 },[])
 

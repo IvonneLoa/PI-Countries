@@ -14,12 +14,10 @@ const axios=require('axios')
                      area:element.area, 
                      population:element.population, 
                  })             
-             } catch (error) { 
-                 console.log(error); 
+             } catch (error) {
              } 
          }); 
-     } catch (error) { 
-         console.log(error); 
+     } catch (error) {
      } 
  }
  

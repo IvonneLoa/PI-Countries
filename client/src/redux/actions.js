@@ -51,16 +51,6 @@ export const getSearchName = (name) => {
   }
 }
 
-// export const getActivities = () => {
-//   return async function(dispatch) {
-//     const activitiesData = (await axios("http://localhost:3001/activities")).data;
-//     dispatch({
-//       type: GET_ACTIVITIES,
-//       payload: activitiesData,
-//     });
-//   }
-// }
-
 export const getActivities = ()=>{ 
   return async (dispatch) =>{ 
       try { 
