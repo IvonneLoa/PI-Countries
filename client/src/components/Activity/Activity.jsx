@@ -1,5 +1,5 @@
-import React from 'react' 
-import s from './Activity.module.css' 
+import React from "react";
+import s from "./Activity.module.css";
  const Activity = (props) => { 
     return ( 
       <div className={s.cardActivity}>             
@@ -11,7 +11,8 @@ import s from './Activity.module.css'
         props.Countries.length>0 &&  
         <ul> 
         { 
-        props.Countries.map((country)=><li key={country.id}>{country.name}</li>) 
+        props.Countries.map((country) =>
+        <li key={country.id}>{country.name}</li>) 
         } 
         </ul> }            
       </div> 

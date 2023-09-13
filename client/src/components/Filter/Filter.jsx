@@ -60,7 +60,7 @@ const Filter = ({ pagination }) => {
           { activity.name} </option> 
             )) : ( 
           <option value='' disabled> 
-          No hay actividades disponibles 
+          Not Activities
           </option> 
           ) 
           }                         

@@ -4,7 +4,9 @@ import Pagination from "../Pagination/Pagination.jsx";
 import { useSelector } from 'react-redux'; 
   
  export default function Cards({ indexOfFirstCountry, indexOfLastCountry, countriesPerPage, pagination }) { 
-  const countries = useSelector(state => state.countries); //Obteniendo el estado de los países listados 
+
+  //estado de los países
+  const countries = useSelector(state => state.countries); 
   
   const currentCountries = countries.slice(indexOfFirstCountry, indexOfLastCountry); 
   

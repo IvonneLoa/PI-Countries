@@ -1,16 +1,20 @@
-.containerForm form{ 
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10em;
+  margin: 10em;
+}
+
+.containerForm form { 
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
   position: relative;
   width: 700px;
   height: 458px;
-  background-image: url("../../image/mapa2.jpg");
-  background-attachment: fixed;
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: center;
-  background-position-y: 10%;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
+  background-color: plum;
   border-radius: 20px;
   font-size: 15px;
   box-sizing: border-box;
@@ -30,7 +34,7 @@
 
 .containerForm label {
   font-size: 40px;
-  color: aqua;
+  color: blueviolet;
   font-family: cursive;
   font-weight: bold;
 }

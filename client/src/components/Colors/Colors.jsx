@@ -1,5 +1,5 @@
-import React from 'react'; 
- import s from './Colors.module.css';
+import React from "react"; 
+ import s from "./Colors.module.css";
   
  const CustomCard = ({ text, onClose,color }) => { 
   
