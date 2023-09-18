@@ -14,21 +14,29 @@ import {
 
 export const getCountries = () => {
   return async function(dispatch) {
+   try {
     const countriesData = (await axios.get("http://localhost:3001/countries")).data;
     dispatch({
       type: GET_COUNTRIES,
       payload: countriesData,
     });
+   } catch (error) {
+    
+   }
   }
 }
 
 export const getCountry = (id) => {
   return async function(dispatch) {
+   try {
     const countryData = (await axios.get(`http://localhost:3001/countries/${id}`)).data;
     dispatch({
       type: GET_COUNTRY,
       payload: countryData,
     });
+   } catch (error) {
+    
+   }
   }
 }
 
@@ -54,11 +62,11 @@ export const getSearchName = (name) => {
 export const getActivities = ()=>{ 
   return async (dispatch) =>{ 
       try { 
-          const {data}= await axios('http://localhost:3001/activities')              
-          return dispatch({ 
-              type:GET_ACTIVITIES,  
-              payload:data            
-          }) 
+        const {data}= await axios('http://localhost:3001/activities')              
+        return dispatch({ 
+          type:GET_ACTIVITIES,  
+          payload:data            
+      }) 
       } 
       catch (error) { 
           console.log(error);        

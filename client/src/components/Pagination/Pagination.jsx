@@ -9,7 +9,7 @@ const Paged =({ countriesPerPage, allCountries, pagination }) => {
   } 
 
   return ( 
-    <div> 
+    <div className={style.div}> 
       { 
       pageNumbers && 
       pageNumbers.map(number => ( 

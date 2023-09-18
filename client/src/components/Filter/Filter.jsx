@@ -26,7 +26,7 @@ const Filter = ({ pagination }) => {
   }
 
   return (
-    <div>
+    <div className={style.div}>
       <div>
         <select className={style.select} name="orderName" defaultValue={"DEFAULT"} onChange={handleClick}>
           <option value="DEFAULT" disabled>Sort by name</option>

@@ -1,25 +1,29 @@
 .div {
-    background-image: url(../../image/banderas2.jpg);
+    background-color: skyblue;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
     padding: 20px;
     overflow: hidden;
-    flex-direction: row;
-    justify-content: flex-end;
-    border: 5px white;
+    border: 2px solid white;
     border-radius: 50px;
     margin: 20px;
 }
 
+.div2 {
+  margin: 20px;
+}
+
 .act {
-  border-radius: 28px;
+  border-radius: 20px;
   font-family: cursive;
-  font-size: 10px;
-  color: blueviolet;
+  font-size: 15px;
+  color: black;
   padding: 20px;
-  margin: 1em;
-  border: ridge;
-  background: aqua;
+  margin: 20px;
+  border: 2px solid white;
+  background: royalblue;
   cursor: pointer;
   font-weight: bold;
 }

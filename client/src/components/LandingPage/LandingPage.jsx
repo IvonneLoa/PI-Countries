@@ -19,7 +19,7 @@ function LandingPage() {
   }
 
     return (
-        <div className={style.main}>
+        <div className={style.content}>
           <div className={style.nav}>
             <h2>App Countries</h2>
             <div className={style.nav2}>

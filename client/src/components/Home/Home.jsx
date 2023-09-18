@@ -23,10 +23,10 @@ function Home() {
           <button className={style.but}>Back</button>
         </Link>
         <h1>🌎 Welcome to the home page 🌎</h1>
-          <div className={style.filter}>
+          <div>
             <Filter pagination={pagination} />
           </div>
-      <div className={style.div}>
+      <div>
           <Cards
         indexOfFirstCountry={indexOfFirstCountry}  
         indexOfLastCountry={indexOfLastCountry}  

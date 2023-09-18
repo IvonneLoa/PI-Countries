@@ -1,8 +1,16 @@
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 .select {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: blue;
+  background-color: royalblue;
   color: white;
   padding: 10px;
   font-size: 15px;
@@ -14,5 +22,6 @@
  }
 
  .select:hover {
-   background-color: aqua;
+  background: #fff;
+  color: royalblue
  }

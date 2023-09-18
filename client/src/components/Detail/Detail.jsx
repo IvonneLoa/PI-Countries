@@ -36,7 +36,7 @@ function Detail() {
           <img className={style.image} src={country.image} alt={country.name}/>
         </div>
         <div> 
-<h1> Tourist Activities:</h1> 
+<h1 className={style.activity}> Tourist Activities:</h1> 
     <div> 
       { //si existen actividades para ese país 
       country.Activities && 
@@ -50,7 +50,7 @@ function Detail() {
       />)
       ):( // si no existen actividades 
       <> 
-      <h2>Not tourist activities:</h2>                             
+      <h2 className={style.not}>Not tourist activities</h2>                             
       </> 
       )}                 
     </div>   

@@ -7,10 +7,10 @@ const NavBar = () => {
   return (
     <div className={style.div}>
       <SearchBar/>
-        <div>
+        <div className={style.div2}>
         <Link className={style.act} to="/createActivities">Create Activities</Link> 
         </div>
-        <div>
+        <div className={style.div2}>
         <Link className={style.act} to="/activities">View Activities</Link>
         </div>
     </div>

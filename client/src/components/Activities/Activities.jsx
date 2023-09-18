@@ -11,9 +11,7 @@ const activities = useSelector(state => state.activities)
   return (        
     <div className={s.div}> 
       <h1 className={s.h1}>Tourist Activities</h1> 
-        <Link to="/home"> 
-            <button className={s.but}>Back</button> 
-        </Link> 
+       
              { 
               activities.length > 0 && 
               activities.map((activity) => 
@@ -27,6 +25,9 @@ const activities = useSelector(state => state.activities)
       />) 
   
              } 
+              <Link to="/home"> 
+            <button className={s.but}>Back</button> 
+        </Link> 
   
          </div> 
      ); 

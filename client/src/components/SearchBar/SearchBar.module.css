@@ -1,19 +1,18 @@
 .div {
     display: flex;
-    justify-content: center;
 }
 
 .input {
     border-radius: 28px;
     font-family: cursive;
     font-size: 2em;
-    color: blueviolet;
+    color: black;
     padding: 12px;
     right: 300px;
     top: 250px;
     position: unset;
     border: ridge;
-    background: aqua;
+    background: #fff;
     border-left-width: medium;
     cursor: pointer;
     margin: 15px;

@@ -67,7 +67,7 @@ const reducer = (state = initialState, action) => {
         countries: orderNameCopy
       };
 
-     case ORDER_POPULATION:
+    case ORDER_POPULATION:
       const orderPopulationCopy = [...state.countriesOrigin];
       orderPopulationCopy.sort((a, b) => {
         if(a.population < b.population) {
@@ -81,7 +81,7 @@ const reducer = (state = initialState, action) => {
         countries: orderPopulationCopy
       };
 
-      case FILTER_CONTINENT:
+    case FILTER_CONTINENT:
         const filterContinent = [...state.countriesOrigin];
         const continentFilter = filterContinent.filter(country => country.continent === action.payload);
         return {
@@ -89,20 +89,22 @@ const reducer = (state = initialState, action) => {
           countries: continentFilter
         };
 
-      case FILTER_ACTIVITIES:          
-        if(action.payload==='') { //todos 
+    case FILTER_ACTIVITIES:          
+        if(action.payload === '') { //todos 
         return { 
             ...state, 
         countries:state.countriesOrigin 
        } 
     } 
-      const filterForActivities=state.activities.find((activity)=>activity.name===action.payload) // accedo a mi estado activities y filtro por nombre de actividad             
+      const filterForActivities = state.activities.find((activity) => activity.name === action.payload)
+      // accedo a mi estado activities y filtro por nombre de actividad             
           return{ 
             ...state, 
-         countries:filterForActivities.Countries // en .Countries se encuentra la info de los paises q tienen dicha actividad, esto viene de la tabla intermedia 
+         countries: filterForActivities.Countries
+         // en .Countries se encuentra la info de los paises q tienen dicha actividad, esto viene de la tabla intermedia 
              }
 
-      case RESET:
+    case RESET:
         return {
           ...state,
           countries: [...state.countriesOrigin],

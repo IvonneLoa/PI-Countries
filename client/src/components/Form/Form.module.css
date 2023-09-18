@@ -1,26 +1,34 @@
+@font-face {
+  font-family: stocky;
+  src: url("../../image/stocky.ttf");
+}
+
 .containerForm {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10em;
-  margin: 10em;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  margin: 50px;
+  gap: 50px;
+}
+
+.tittle {
+  color: navy;
+  font-family: stocky;
+  font-size: 50px;
 }
 
 .containerForm form { 
   display: grid;
   flex-direction: column;
   align-items: center;
-  margin-top: 5em;
-  position: relative;
-  width: 700px;
-  height: 458px;
-  background-color: plum;
+  position: static;
+  width: 850px;
+  height: 650px;
+  background-color: #b9ffff;
   border-radius: 20px;
   font-size: 15px;
-  box-sizing: border-box;
-  border: solid #2d4bf3 10px;
-  width: fit-content;
-  height: fit-content;
+  border: solid navy 5px;
 } 
 
 .containerForm p{ 
@@ -33,23 +41,18 @@
 } 
 
 .containerForm label {
-  font-size: 40px;
-  color: blueviolet;
+  font-size: 25px;
+  color: black;
   font-family: cursive;
   font-weight: bold;
-}
-
-.tittle {
-  justify-content: center;
-  color: blue;
-  font-family: cursive;
+  margin: 20px;
 }
 
 .input {
-  background: silver;
-  border: 3px solid #2d4bf3;
+  background: royalblue;
+  border: 3px solid navy;
   border-radius: 50px;
-  color: black;
+  color: white;
   font-family: cursive;
   font-size: 15px;
   font-weight: bold;
@@ -57,20 +60,28 @@
 }
 
 .input:hover {
-  background-color: blueviolet;
+  background-color: #fff;
+  color: navy;
 }
 
 .submit {
-  border-radius: 28px;
-  font-family: cursive;
-  font-size: 10px;
-  color: blueviolet;
-  padding: 20px;
-  margin: 1em;
-  border: ridge;
-  background: aqua;
-  cursor: pointer;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid royalblue;
+  background: royalblue;
+}
+.submit:hover {
+  background: #fff;
+  color: royalblue
 }
 
 .containerFlags { 
@@ -116,5 +127,10 @@
 }
 
 .pl {
+  display: flex;
   color: red;
+  max-width: 80vw;        
+  max-height: 45vh;
+  padding: 1%; 
+  margin: 1%; 
 }

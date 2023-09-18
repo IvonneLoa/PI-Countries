@@ -114,11 +114,8 @@ const handlerCloseCard =()=>{
    } 
   
 return ( 
-    <div className={s.containerForm}> 
-        <Link to='/home'> 
-            <button className={s.submit}>Back</button> 
-        </Link> 
-             <h1 className={s.tittle}>Activities</h1> 
+    <div className={s.containerForm}>
+        <h1 className={s.tittle}>Create Tourist Activity</h1>
 <form onSubmit={onSubmit}> 
     <label>Name of the tourist activity: </label> 
         <input className={s.input}
@@ -189,6 +186,9 @@ form.optionsSelected.map((country)=>(
 { 
 showCustomCard.text && <Colors text={showCustomCard.text} onClose={handlerCloseCard} color={showCustomCard.color}/> 
 }  
+<Link to='/home'> 
+  <button className={s.submit}>Back</button> 
+</Link>
 </div> 
   ); 
  } 

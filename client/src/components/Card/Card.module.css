@@ -1,8 +1,9 @@
 .card {
-    margin: 20px;
-    width: 15rem;
-    height: 23rem;
-    background-color: blueviolet;
+    margin: 25px;
+    width: 50em;
+    height: 70em;
+    font-size: 5px;
+    background-color: #b9ffff;
     border: 2px solid #06d6a0;
     font-family: cursive;
     border-radius: 2em;
@@ -12,25 +13,25 @@
 
 .card:hover {
     box-shadow: 0 0 20px 1px rgb(1, 0, 1);
-    background-color: aqua;
-    width: 15rem;
+    background-color: #fff;
 }
 
 .h1 {
-    font-size: 28px;
+    font-size: 20px;
     margin: 5%;
+    text-align: center;
 }
 
 .h3 {
-    font-size: 28px;
+    font-size: 20px;
     margin: 5%;
+    color: black;
 }
 
 .image {
-    padding: 0;
-    width: 16vw;
-    height: 135px;
+    width: 55%;
+    height: 35%;
+    margin: 55px;
     object-fit: cover;
     border-radius: 15px;
-    margin: 5%;
 }

@@ -10,3 +10,6 @@ server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 })
 }).catch(error => console.error(error))
+
+//force: true elimina y recrea todas las tablas en la base de datos.
+
