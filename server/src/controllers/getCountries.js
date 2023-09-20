@@ -12,6 +12,7 @@ const getCountries = async (req , res) => {
           },
           include: {
             model: Activity,
+            //asociacion con el modelo Actividad
             attributes: ["name"],
             through: {
               attributes: []

@@ -45,7 +45,7 @@ setSelectedCountry('') // para volver a "selected country" en mi select de html
 const onSubmit = async (e) => {
   //enviaremos por body a la URL del back 
   e.preventDefault();         
-  const activity=await dispatch(postActivity(form))  
+  const activity = await dispatch(postActivity(form))  
   dispatch(getActivities())
   // hasta q no se completa el post no obtengo            
   if(!activity.payload.error) { // si no nos llega error             
@@ -103,7 +103,8 @@ const countriesResult= form.countries.filter((elem)=>elem!==id) // quitamos tamb
   } 
 const handlerCloseCard =()=>{ 
     setShowCustomCard(false) 
-    setForm({  // limpiamos el estado 
+    if(showCustomCard.color === "green") {
+      setForm({  // limpiamos el estado 
         name: "", 
         difficulty: "", 
         duration: "", 
@@ -111,6 +112,7 @@ const handlerCloseCard =()=>{
         countries: [],       
         optionsSelected:[]  
     }) 
+    }
    } 
   
 return ( 

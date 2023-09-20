@@ -68,12 +68,10 @@
 }
 
 .image {
-    padding: 0;
-    width: 16vw;
-    height: 135px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin: 5%;
+    width: 35%;
+    height: 15%;
+    margin: 25px;
+    object-fit: contain;
 }
 
 .activity {

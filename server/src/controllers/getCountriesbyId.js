@@ -14,13 +14,13 @@ const getCountrybyId = async (req , res) => {
           },
         });
     
-        if (!country) {
-          return res.status(404).send({ message: "País no encontrado" });
-        }
-    
-        return res.status(200).json(country);
+        if (!id)
+          return res.status(404).send("No existe ID") 
+          country ? res.status(200).json(country)
+          :
+          res.status(404).send(`No existe país con el id: ${id}`)
       } catch (error) {
-        return res.status(500).send({ message: "Error al obtener el país", error: error.message });
+        return res.status(500).send(error.message);
       }
     };
 

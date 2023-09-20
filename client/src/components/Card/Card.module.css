@@ -29,9 +29,8 @@
 }
 
 .image {
-    width: 55%;
-    height: 35%;
+    width: 45%;
+    height: 25%;
     margin: 55px;
-    object-fit: cover;
-    border-radius: 15px;
+    object-fit: contain;
 }

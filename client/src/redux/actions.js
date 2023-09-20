@@ -21,7 +21,7 @@ export const getCountries = () => {
       payload: countriesData,
     });
    } catch (error) {
-    
+    alert(error.message);
    }
   }
 }
@@ -35,7 +35,7 @@ export const getCountry = (id) => {
       payload: countryData,
     });
    } catch (error) {
-    
+    alert(error.message);
    }
   }
 }
@@ -69,7 +69,7 @@ export const getActivities = ()=>{
       }) 
       } 
       catch (error) { 
-          console.log(error);        
+        alert(error.message);        
       } 
   } 
 }

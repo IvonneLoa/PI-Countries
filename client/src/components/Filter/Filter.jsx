@@ -1,6 +1,6 @@
 import style from "./Filter.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { getCountries, orderName, orderPopulation, filterContinent, filterActivities, reset } from "../../redux/actions";
+import { getCountries, orderName, orderPopulation, filterContinent, filterActivities, reset, getActivities } from "../../redux/actions";
 import { ASCENDING, DESCENDING, HIG, LOW } from "../../redux/types";
 import { useEffect } from "react";
 
@@ -8,10 +8,13 @@ const Filter = ({ pagination }) => {
   //Estado de las actividades
   const activities = useSelector(state => state.activities);
 
+  const countries = useSelector(state => state.countries);
+
   const dispatch = useDispatch();
 
   useEffect(()=>{        
-    dispatch(getCountries())
+   if(activities.length === 0) dispatch(getActivities());
+   if(!countries.error) dispatch(getCountries())
 },[])
 
   function handleClick(e) {

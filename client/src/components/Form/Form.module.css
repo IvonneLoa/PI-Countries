@@ -23,8 +23,8 @@
   flex-direction: column;
   align-items: center;
   position: static;
-  width: 850px;
-  height: 650px;
+  width: 1150px;
+  height: 750px;
   background-color: #b9ffff;
   border-radius: 20px;
   font-size: 15px;
@@ -98,7 +98,7 @@
 
 .flags{ 
  position: relative;  
- max-width: 300px;    
+ max-width: 80vw;
 } 
 
 .flags img {     
@@ -114,7 +114,7 @@
   cursor: pointer; 
   background-color: #0908087d; 
   color: rgb(242, 234, 234); 
-  font-size: 1vw; 
+  font-size: 0.5vw; 
   padding: 0.6vh 1vh;   
   margin: 0.4vh;  
   border: rgb(101, 146, 174) solid 0.4px;   
