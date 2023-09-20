@@ -51,7 +51,7 @@ const onSubmit = async (e) => {
   if(!activity.payload.error) { // si no nos llega error             
   setShowCustomCard({ 
     ...showCustomCard, 
-    text:`The tourist activity whit name ${form.name} was created successfully`, 
+    text:`La actividad turistica ${form.name} fue creada exitosamente`, 
     color:'green' 
     }) 
     }else { 

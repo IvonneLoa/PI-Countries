@@ -1,6 +1,6 @@
 import style from "./Pagination.module.css";
 
-const Paged =({ countriesPerPage, allCountries, pagination }) => { 
+const Pagination =({ countriesPerPage, allCountries, pagination }) => { 
   const pageNumbers = []; 
 
   //Match.ceil devuelve el entero mayor o igual más próximo al número dado
@@ -22,4 +22,4 @@ const Paged =({ countriesPerPage, allCountries, pagination }) => {
   ); 
   }
 
-  export default Paged;
+  export default Pagination;

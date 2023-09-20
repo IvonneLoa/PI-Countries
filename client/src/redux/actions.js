@@ -69,7 +69,7 @@ export const getActivities = ()=>{
       }) 
       } 
       catch (error) { 
-        alert(error.message);        
+        console.log(error);        
       } 
   } 
 }

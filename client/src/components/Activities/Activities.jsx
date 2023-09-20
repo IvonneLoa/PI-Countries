@@ -11,8 +11,11 @@ const activities = useSelector(state => state.activities)
   return (        
     <div className={s.div}> 
       <h1 className={s.h1}>Tourist Activities</h1> 
-       
-             { 
+      <Link to="/home"> 
+            <button className={s.but}>Back</button> 
+      </Link> 
+        <div className={s.div2}>
+        { 
               activities.length > 0 && 
               activities.map((activity) => 
         <Activity 
@@ -22,13 +25,8 @@ const activities = useSelector(state => state.activities)
               difficulty={activity.difficulty} 
               season={activity.season} 
               Countries={activity.Countries} 
-      />) 
-  
-             } 
-              <Link to="/home"> 
-            <button className={s.but}>Back</button> 
-        </Link> 
-  
+      />)}
+        </div>
          </div> 
      ); 
  } 

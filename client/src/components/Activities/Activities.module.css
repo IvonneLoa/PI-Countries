@@ -5,7 +5,15 @@
 
 .div {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px;
+}
+
+.div2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   flex-direction: row;
   justify-content: space-around;
