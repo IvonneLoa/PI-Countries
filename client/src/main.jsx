@@ -9,7 +9,7 @@ import store from "./redux/store.js";
 import axios from "axios";
 
 // axios.defaults.baseURL= "http://localhost:3001";
-axios.defaults.baseURL= "http://https://pi-countries-production-a4ba.up.railway.app/";
+axios.defaults.baseURL= "http://pi-countries-production-a743.up.railway.app";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
