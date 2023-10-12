@@ -9,11 +9,6 @@ import Form from "./components/Form/Form.jsx";
 import Activities from './components/Activities/Activities';
 // import Error from "./components/Error/Error.jsx";
 
-import axios from "axios";
-
-// axios.defaults.baseURL= "http://localhost:3001";
-axios.defaults.baseURL= "http://pi-countries-production-a743.up.railway.app";
-
 function App() {
   const location = useLocation();
   
